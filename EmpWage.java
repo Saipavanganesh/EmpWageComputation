@@ -9,11 +9,12 @@ public class EmpWage {
         int wagePerHour=20;
         int fullDayHours=0;
         int totalWorkingDays=20;
+        int maxHours=100;
         int totalHoursWorked=0;
         int daysPresent=0;
         int salary;
 
-        for(int i=0;i<totalWorkingDays;i++){
+        while(daysPresent<totalWorkingDays && totalHoursWorked<maxHours){
             double empCheck=Math.floor(Math.random()*10)%3;
             switch (Double.toString(empCheck)){
                 case "1.0":
