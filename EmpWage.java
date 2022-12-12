@@ -10,16 +10,19 @@ public class EmpWage {
         int fullDayHours=8;
         int salary;
 
-        if(empCheck==1.0){
-            System.out.println("Employee is present");
-        }
-        else if (empCheck==2.0) {
-            System.out.println("Emp is Part time present");
-            fullDayHours=4;
-        }
-        else{
-            System.out.println("Employee is absent");
-            fullDayHours=0;
+
+        switch (Double.toString(empCheck)){
+            case "1.0":
+                System.out.println("Employee is present");
+                break;
+            case "2.0":
+                System.out.println("Emp is Part time present");
+                fullDayHours=4;
+                break;
+            default:
+                System.out.println("Employee is absent");
+                fullDayHours=0;
+                break;
         }
 
         salary=fullDayHours*wagePerHour;
